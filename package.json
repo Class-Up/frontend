@@ -47,7 +47,9 @@
   },
   "standard": {
     "ignore": [
-      "playground/"
+      "playground/",
+      "*.test.js",
+      "serviceWorker.js"
     ]
   },
   "author": "Rurick Maqueo, Brenda Gonzalez, Carlos Ojeda",
