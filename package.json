@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "class_up_frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -27,5 +27,38 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:School-Enhansment/frontend.git"
+  },
+  "keywords": [
+    "class",
+    "up",
+    "school",
+    "teacher",
+    "student",
+    "frontend"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo '- Running standard -' && standard --fix"
+    }
+  },
+  "standard": {
+    "ignore": [
+      "playground/"
+    ]
+  },
+  "author": "Rurick Maqueo, Brenda Gonzalez, Carlos Ojeda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/School-Enhansment/frontend/issues"
+  },
+  "homepage": "https://github.com/School-Enhansment/frontend#readme",
+  "devDependencies": {
+    "husky": "^3.0.5",
+    "nodemon": "^1.19.2",
+    "standard": "^14.3.1"
   }
 }
