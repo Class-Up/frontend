@@ -1,8 +1,6 @@
 
 import React from 'react'
 
-import '../styles.scss'
-
 // ToDo: Change the 404 Page to a good one
 function Error ({ statusCode }) {
   return (
