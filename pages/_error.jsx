@@ -1,21 +1,37 @@
 
 import React from 'react'
 
-// ToDo: Change the 404 Page to a good one
+import ImageAndSideContainer from '../components/ImageAndSideContainer'
+import Title from '../components/Title'
+import BodyText from '../components/BodyText'
+
 function Error ({ statusCode }) {
   return (
-    <div className='columns'>
-      <div className='column'>
-        <div className='box'>
-          <article>
-            <p className='is-size-1 has-text-danger'>
-              Error 404 Pagina No Encontrada
-            </p>
-          </article>
+    <div className='container'>
+      <ImageAndSideContainer
+        image='http://cdn.classup.space/assets/ilustrations/pluto-rocket-crash.svg'
+      >
+        <div className='column'>
+          <Title
+            size='2'
+            text={statusCode}
+          />
+          <Title
+            isBlack
+            text='Houston tenemos un problema'
+          />
+          <BodyText
+            text='No pudimos encontrar lo que buscabas'
+          />
         </div>
-      </div>
+      </ImageAndSideContainer>
     </div>
   )
+}
+
+Error.getInitialProps = ({ res, err }) => {
+  const statusCode = res ? res.statusCode : err ? err.statusCode : 404
+  return { statusCode }
 }
 
 export default Error
