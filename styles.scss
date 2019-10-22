@@ -11,10 +11,12 @@
 
 $pink: #fe3888;
 $white: #fcfcfc;
-$radius: 15px;
+$radius: 12px;
 
 $primary: $pink;
 $light: $white;
 $radius-rounded: $radius;
+$link: $pink;
+$link-focus-border: $pink;
 
 @import "./node_modules/bulma/bulma.sass";
