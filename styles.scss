@@ -9,6 +9,17 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.image{
+  box-sizing: content-box;
+  width: 75%;
+  align-self: center;
+}
+
+.form-container{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 $pink: #fe3888;
 $white: #fcfcfc;
 $radius: 12px;

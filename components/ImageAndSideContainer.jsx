@@ -1,11 +1,15 @@
 
 import React from 'react'
 
+import Image from '../components/Image'
+
 function ImageAndSideContainer (props) {
   return (
-    <div className='columns is-mobil has-text-centered'>
+    <div className='columns has-text-centered'>
       <div className='column is-half'>
-        <img src={props.image} alt={props.image} />
+        <Image
+          name={props.image}
+        />
       </div>
       <div className='column is-half'>
         <div className='column'>

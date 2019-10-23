@@ -5,7 +5,7 @@ import Input from './Input'
 
 function FormSignUp (props) {
   return (
-    <form>
+    <form className='has-text-left'>
       <Input
         type='email'
         label='Correo Electrónico'
