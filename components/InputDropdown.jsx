@@ -6,10 +6,15 @@ function InputDropdown (props) {
   })
 
   return (
-    <div class='select'>
-      <select>
-        {options}
-      </select>
+    <div className='field'>
+      <label className='label'>{props.label}</label>
+      <div className='control'>
+        <div className='select'>
+          <select>
+            {options}
+          </select>
+        </div>
+      </div>
     </div>
   )
 }

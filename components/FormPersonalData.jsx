@@ -18,6 +18,7 @@ function FormPersonalData (props) {
         placeholder='Escribe tus Apellidos'
       />
       <InputDropdown
+        label='Escolaridad'
         options={['Secundaria', 'Preparatoria', 'Universidad']}
       />
       <Input
