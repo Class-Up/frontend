@@ -8,7 +8,7 @@ import Button from '../components/Button'
 function LoginUser () {
   return (
     <ImageAndSideContainer
-      image='http://cdn.classup.space/assets/ilustrations/pluto-suit-ready.svg'
+      image='http://cdn.classup.space/assets/illustrations/pluto-suit-ready.svg'
     >
       <Title
         isBlack
