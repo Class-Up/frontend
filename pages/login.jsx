@@ -5,7 +5,7 @@ import Title from '../components/Title'
 import FormSignUp from '../components/FormLogin'
 import Button from '../components/Button'
 
-function LoginUser () {
+function Login () {
   return (
     <ImageAndSideContainer
       image='http://cdn.classup.space/assets/illustrations/pluto-suit-ready.svg'
@@ -23,8 +23,7 @@ function LoginUser () {
         text='Iniciar Sesión'
       />
     </ImageAndSideContainer>
-
   )
 }
 
-export default LoginUser
+export default Login

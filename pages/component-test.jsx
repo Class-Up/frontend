@@ -2,7 +2,7 @@
 import React from 'react'
 import Medals from '../components/Medals'
 
-function Student () {
+function ComponentTest () {
   return (
     <div className='columns is-centered'>
       <div className='column is-half'>
@@ -12,4 +12,4 @@ function Student () {
   )
 }
 
-export default Student
+export default ComponentTest
