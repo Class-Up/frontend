@@ -2,7 +2,6 @@ import React from 'react'
 
 import Input from './Input'
 
-
 function FormLogin (props) {
   return (
     <form>
