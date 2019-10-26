@@ -1,17 +1,18 @@
 {
-  "name": "frontend",
+  "name": "class_up_frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.2"
+    "@zeit/next-sass": "^1.0.1",
+    "next": "^9.1.1",
+    "node-sass": "^4.12.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +28,41 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Class-Up/frontend.git"
+  },
+  "keywords": [
+    "class",
+    "up",
+    "school",
+    "teacher",
+    "student",
+    "frontend"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo '- Running standard -' && standard --fix"
+    }
+  },
+  "standard": {
+    "ignore": [
+      "playground/",
+      "*.test.js",
+      "serviceWorker.js"
+    ]
+  },
+  "author": "Rurick Maqueo, Brenda Gonzalez, Carlos Ojeda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/School-Enhansment/frontend/issues"
+  },
+  "homepage": "https://github.com/School-Enhansment/frontend#readme",
+  "devDependencies": {
+    "bulma": "^0.7.5",
+    "husky": "^3.0.5",
+    "nodemon": "^1.19.2",
+    "standard": "^14.3.1"
   }
 }
