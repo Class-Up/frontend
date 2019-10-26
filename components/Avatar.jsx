@@ -2,9 +2,7 @@ import React from 'react'
 
 function Avatar (props) {
   return (
-    <figure className='image is-96x96'>
-      <img className='is-avatar' src={props.image} />
-    </figure>
+      <div className={`is-avatar is-${props.gender}`} />
   )
 }
 export default Avatar

@@ -2,7 +2,7 @@ import React from 'react'
 
 import ImageAndSideContainer from '../components/ImageAndSideContainer'
 import Title from '../components/Title'
-import FormSignUp from '../components/FormLogin'
+import FormLogin from '../components/FormLogin'
 import Button from '../components/Button'
 
 function Login () {
@@ -14,7 +14,7 @@ function Login () {
         isBlack
         text='Iniciar Sesión'
       />
-      <FormSignUp />
+      <FormLogin />
       <Button
         text='Registrarme'
       />
