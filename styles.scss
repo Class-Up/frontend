@@ -1,5 +1,18 @@
+$pink: #fe3888;
+$white: #fcfcfc;
+$radius: 12px;
+
+$primary: $pink;
+$light: $white;
+$radius-rounded: $radius;
+$link: $pink;
+$link-focus-border: $pink;
 
 @charset "utf-8";
+@import "./sass/hexagonal.scss";
+@import "./sass/avatar.scss";
+@import "./sass/medals.scss";
+@import "./sass/image.scss";
 
 *{
   font-family: 'Open Sans', sans-serif;
@@ -11,26 +24,5 @@
 .is-body {
   font-family: 'Open Sans', sans-serif;
 }
-
-.image{
-  box-sizing: content-box;
-  width: 75%;
-  align-self: center;
-}
-
-.form-container{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-$pink: #fe3888;
-$white: #fcfcfc;
-$radius: 12px;
-
-$primary: $pink;
-$light: $white;
-// $radius-rounded: $radius;
-$link: $pink;
-$link-focus-border: $pink;
 
 @import "./node_modules/bulma/bulma.sass";

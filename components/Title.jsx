@@ -10,7 +10,7 @@ function Title (props) {
 
   props.size
     ? style.push(`is-size-${props.size}`)
-    : style.push('is-size-1')
+    : style.push('is-size-1-desktop is-size-3-touch')
 
   const className = style.join(' ')
 

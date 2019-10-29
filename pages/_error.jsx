@@ -9,7 +9,7 @@ function Error ({ statusCode }) {
   return (
     <div className='container'>
       <ImageAndSideContainer
-        image='pluto-rocket-crash.svg'
+        image='http://cdn.classup.space/assets/illustrations/pluto-rocket-crash.svg'
       >
         <div className='column'>
           <Title
