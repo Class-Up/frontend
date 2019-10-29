@@ -11,16 +11,16 @@ function SignUp2 () {
     <ImageAndSideContainer
       image='pluto-rocket-sailing.svg'
     >
-
       <Title
         isBlack
-        text='Cuentanos Más De Ti'
+        text='Cuéntanos Más De Ti'
       />
       <div className='form-container'>
         <FormPersonalData />
       </div>
       <Button
         text='Continuar'
+        type='submit'
       />
     </ImageAndSideContainer>
 

@@ -11,6 +11,7 @@ function Student () {
           <p className='is-body'>soy el cuerpo en open sans</p>
           <button className='button is-primary is-rounded  is-size-4'>Despegar</button>
           <button className='button is-outlined is-primary is-rounded  is-size-4'>Despegar</button>
+          />
         </div>
       </div>
     </div>

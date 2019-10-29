@@ -19,7 +19,7 @@ function FormPersonalData (props) {
       />
       <InputDropdown
         label='Escolaridad'
-        options={['Secundaria', 'Preparatoria', 'Universidad']}
+        options={['Secundaria', 'Preparatoria', 'Carrera Técnica', 'Universidad', 'Postgrado']}
       />
       <Input
         type='text'

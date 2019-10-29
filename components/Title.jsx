@@ -6,6 +6,8 @@ function Title (props) {
 
   if (props.isBlack) style.push('has-text-black')
 
+  if (props.weight) style.push(`has-text-weight-${props.weight}`)
+
   props.size
     ? style.push(`is-size-${props.size}`)
     : style.push('is-size-1')

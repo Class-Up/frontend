@@ -1,0 +1,20 @@
+import React from 'react'
+
+function InputOpcion (props) {
+  return (
+    <div
+      className='control'
+    >
+      {props.options.map((option, index) => {
+        return (
+          <label className='radio is-primary' key={index}>
+            <input type='radio' name={props.question} />
+            {option}
+          </label>
+        )
+      })}
+    </div>
+  )
+}
+
+export default InputOpcion

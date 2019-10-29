@@ -1,6 +1,8 @@
 
 import React from 'react'
 
+import Link from 'next/link'
+
 import ImageAndSideContainer from '../components/ImageAndSideContainer'
 import Title from '../components/Title'
 import FormSignUp from '../components/FormSignUp'
@@ -18,9 +20,14 @@ function SignUp () {
       <div className='form-container'>
         <FormSignUp />
       </div>
-      <Button
-        text='Registrate'
-      />
+      <Link href='/sign-up-second'>
+        <a>
+          <Button
+            text='Continuar Registro'
+          />
+        </a>
+      </Link>
+      <br />
       <Button
         isOutlined
         text='Iniciar Sesión'

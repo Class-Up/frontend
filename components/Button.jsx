@@ -11,6 +11,7 @@ function Button (props) {
   return (
     <button
       className={className}
+      type={props.type}
     >
       {props.text}
     </button>
