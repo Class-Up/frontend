@@ -9,7 +9,7 @@ import Button from '../components/Button'
 function SignUp () {
   return (
     <ImageAndSideContainer
-      image='http://cdn.classup.space/assets/ilustrations/pluto-rocket-launch.svg'
+      image='http://cdn.classup.space/assets/illustrations/pluto-rocket-launch.svg'
     >
       <Title
         isBlack
