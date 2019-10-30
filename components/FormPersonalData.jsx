@@ -17,15 +17,22 @@ function FormPersonalData (props) {
         label='Apellidos'
         placeholder='Escribe tus Apellidos'
       />
-      <InputDropdown
-        label='Escolaridad'
-        options={['Secundaria', 'Preparatoria', 'Carrera Técnica', 'Universidad', 'Postgrado']}
-      />
-      <Input
-        type='text'
-        label='Edad'
-        placeholder='Ingresa tu edad'
-      />
+      <div className='columns is-multilined'>
+        <div className='column is-narrow'>
+          <InputDropdown
+            label='Escolaridad'
+            options={['Secundaria', 'Preparatoria', 'Carrera Técnica', 'Universidad', 'Postgrado']}
+          />
+        </div>
+        <div className='column is-narrow'>
+          <Input
+            type='text'
+            label='Edad'
+            placeholder='Ingresa tu edad'
+          />
+        </div>
+      </div>
+
     </form>
   )
 }

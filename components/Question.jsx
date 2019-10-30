@@ -4,10 +4,11 @@ import InputOpcion from './InputOpcion'
 
 function Question (props) {
   return (
-    <div>
+    <div className='has-text-justified question'>
       <Title
         weight='semibold'
         isBlack
+        mobile='6'
         size='4'
         text={props.question}
       />

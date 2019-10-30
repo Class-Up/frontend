@@ -3,8 +3,8 @@ import React from 'react'
 
 function InputText (props) {
   return (
-    <div class='field'>
-      <div class='control'>
+    <div className='field margin-top'>
+      <div className='control'>
         <textarea
           class='textarea is-primary'
           placeholder={props.placeholder}

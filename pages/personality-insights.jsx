@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Link from 'next/link'
+
 import ImageAndSideContainer from '../components/ImageAndSideContainer'
 import Title from '../components/Title'
 import BodyText from '../components/BodyText'
@@ -15,7 +17,7 @@ function PersonalityInsights () {
         <div className='column'>
           <Title
             isBlack
-            text='Analisis de Personalidad'
+            text='Análisis de Personalidad'
           />
           <BodyText
             text='Cuentanos un poco más sobre ti para que nuestra inteligencia artificial nos ayude a determinar cuáles son los mejores métodos de estudios para ti'
@@ -23,9 +25,21 @@ function PersonalityInsights () {
           <InputText
             placeholder='Ingresa al menos 100 palabras'
           />
-          <Button
-            text='Finalizar'
-          />
+          <Link href='/student'>
+            <a className='is-block has-margin-top-1'>
+              <Button
+                text='Finalizar'
+              />
+            </a>
+          </Link>
+          <Link href='/student'>
+            <a className='is-block has-margin-top-1'>
+              <Button
+                isOutlined
+                text='Omitir'
+              />
+            </a>
+          </Link>
         </div>
       </ImageAndSideContainer>
     </div>

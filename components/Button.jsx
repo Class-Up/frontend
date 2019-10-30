@@ -2,7 +2,7 @@
 import React from 'react'
 
 function Button (props) {
-  const style = ['button', 'is-primary', 'is-rounded', 'is-size-4']
+  const style = ['button', 'classup-button', 'is-primary', 'is-rounded', 'is-size-4', 'is-size-6-touch']
 
   if (props.isOutlined) style.push('is-outlined')
 

@@ -8,7 +8,7 @@ function FormSignUp (props) {
   return (
     <form
       className='has-text-left'
-      onSubmit={onSubmit}
+    // onSubmit={onSubmit}
     >
       <Input
         id='email'
@@ -16,7 +16,7 @@ function FormSignUp (props) {
         type='email'
         label='Correo Electrónico'
         placeholder='example@something.com'
-        onChange={onChange}
+      // onChange={onChange}
       />
       <Input
         id='password'
@@ -24,7 +24,7 @@ function FormSignUp (props) {
         type='password'
         label='Contraseña'
         placeholder='Escribe una contraseña'
-        onChange={onChange}
+      // onChange={onChange}
       />
       <Input
         id='confirmPassword'
@@ -32,7 +32,7 @@ function FormSignUp (props) {
         type='password'
         label='Confirmar Contraseña'
         placeholder='Confirma tu contraseña'
-        onChange={onChange}
+      // onChange={onChange}
       />
     </form>
   )

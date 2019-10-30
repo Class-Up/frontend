@@ -5,14 +5,16 @@ export default [
       'Examen escrito',
       'Examen oral',
       'Examen de opción múltiple'
-    ]
+    ],
+    answers: ['visual', 'auditivo', 'kinestesico']
   },
   {
     question: 'Cuando tienes que aprender algo de memoria...',
     options: [
       'Memorizo lo que veo y recuerdo la imagen (por ejemplo, la página del libro)',
       'Memorizo mejor si repito lo estudiado rítmicamente y recuerdo paso a paso',
-      'Memorizo a base de pasear y mirar, y recuerdo una idea general mejor que los detalles']
+      'Memorizo a base de pasear y mirar, y recuerdo una idea general mejor que los detalles'],
+    answers: ['visual', 'auditivo', 'kinestesico']
   },
   {
     question: 'Cuando estás en clase y el profesor explica algo que está escrito en la pizarra o en tu libro, te es más fácil seguir las explicaciones...',

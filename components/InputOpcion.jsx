@@ -7,7 +7,7 @@ function InputOpcion (props) {
     >
       {props.options.map((option, index) => {
         return (
-          <label className='radio is-primary' key={index}>
+          <label className='radio is-primary is-block answer' key={index}>
             <input type='radio' name={props.question} />
             {option}
           </label>
