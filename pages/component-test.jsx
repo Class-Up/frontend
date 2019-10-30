@@ -1,16 +1,19 @@
 
 import React from 'react'
-import Medals from '../components/Medals'
-import Avatar from '../components/Avatar'
+import BottomNavbar from '../components/BottomNavbar'
 
 function ComponentTest () {
   return (
-    <div className='columns is-centered'>
-      <div className='column is-half'>
-        <Medals image='conquer' />
-      </div>
-      <div className='column is-half'>
-        <Avatar gender='male' />
+    <div className='container'>
+      <div className='column'>
+        <BottomNavbar
+          icons={[
+            'fas fa-user-graduate',
+            'fas fa-sticky-note',
+            'fas fa-tasks',
+            'fas fa-sticky-note'
+          ]}
+        />
       </div>
     </div>
   )
