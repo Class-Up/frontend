@@ -8,7 +8,6 @@ import FormLogin from '../components/FormLogin'
 import Button from '../components/Button'
 
 function Login () {
-
   return (
     <ImageAndSideContainer
       image='pluto-suit-ready.svg'
