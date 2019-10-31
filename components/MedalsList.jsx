@@ -4,6 +4,7 @@ import Medals from './Medals'
 
 function MedalsList (props) {
   return (
+<<<<<<< Updated upstream
     <>
       {props.medals.map((medal, index) => {
         return (
@@ -14,6 +15,25 @@ function MedalsList (props) {
         )
       })}
     </>
+=======
+    <div className='medal-list'>
+      <Title
+        size='5'
+        text='Tus Medallas'
+      />
+      <div className='columns is-multiline is-mobile'>
+        {props.medals.map((medal, index) => {
+          return (
+            <div className='column is-one-third' key={index}>
+              <Medals
+                image={medal.name}
+              />
+            </div>
+          )
+        })}
+      </div>
+    </div>
+>>>>>>> Stashed changes
   )
 }
 
