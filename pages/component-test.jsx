@@ -1,19 +1,23 @@
 
 import React from 'react'
-import BottomNavbar from '../components/BottomNavbar'
+import Medals from '../components/Medals'
+//import BottomNavbar from '../components/BottomNavbar'
+import FloatActionButton from '../components/FloatActionButton'
 
 function ComponentTest () {
   return (
     <div className='container'>
       <div className='column'>
-        <BottomNavbar
+        {/* <BottomNavbar
           icons={[
-            'fas fa-user-graduate',
             'fas fa-sticky-note',
+            'fas fa-calendar',
             'fas fa-tasks',
-            'fas fa-sticky-note'
+            'fas fa-user-graduate'
           ]}
-        />
+        /> */}
+        <Medals image='conquer' />
+        <FloatActionButton />
       </div>
     </div>
   )
