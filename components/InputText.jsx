@@ -6,7 +6,7 @@ function InputText (props) {
     <div className='field margin-top'>
       <div className='control'>
         <textarea
-          class='textarea is-primary'
+          className='textarea is-primary'
           placeholder={props.placeholder}
         />
       </div>

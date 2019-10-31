@@ -9,7 +9,7 @@ function InputOpcion (props) {
         return (
           <label className='radio is-primary is-block answer' key={index}>
             <input type='radio' name={props.question} />
-            {option}
+            {option.answer}
           </label>
         )
       })}
