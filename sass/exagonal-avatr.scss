@@ -1,0 +1,11 @@
+.is-exagonal-avatar {
+  &.is-male{
+    background-image: url("http://cdn.classup.space/assets/illustrations/pluto-profile-male")
+  }
+  &.is-female{
+    background-image: url("http://cdn.classup.space/assets/illustrations/pluto-profile-female")
+  }
+  &.is-non-binary{
+    background-image: url("http://cdn.classup.space/assets/illustrations/pluto-profile-male")
+  }
+}
