@@ -1,0 +1,20 @@
+.is-avatar {
+  position: relative;
+  left: 25%;
+  border: 0.3rem solid $pink;
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  max-width: 200px;
+  max-height: 200px;
+  min-height: 50px;
+  min-width: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.is-female {
+    background-image: url("http://cdn.classup.space/assets/illustrations/pluto-profile-female.png")
+	}
+  &.is-male {
+    background-image: url("http://cdn.classup.space/assets/illustrations/pluto-profile-male.png")
+	}
+}

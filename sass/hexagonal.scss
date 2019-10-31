@@ -1,0 +1,25 @@
+.is-hexagon {
+    position: relative;
+    width: 50px; 
+    height: 55px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    &:after,&:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        border-left: 25px solid white;
+        border-right: 25px solid white;
+    }
+    &:before {
+        bottom: 100%;
+        border-bottom: 12.5px solid transparent;
+        top: 0px;
+    }
+    &:after{
+        bottom: 0;
+        width: 0;
+        border-top: 12.5px solid transparent;
+    }
+  }

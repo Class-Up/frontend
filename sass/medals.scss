@@ -1,0 +1,27 @@
+.is-medal {
+  text-align: left;
+  &.is-conquer{
+    background-image: url("http://cdn.classup.space/assets/medals/pluto-conquer.png")
+  }
+  &.is-start {
+    background-image: url("http://cdn.classup.space/assets/medals/pluto-celebrating-start.png")
+  }
+  &.is-launch {
+    background-image: url("http://cdn.classup.space/assets/medals/pluto-rocket-launch.png")
+  }
+  &.is-sailing {
+    background-image: url("http://cdn.classup.space/assets/medals/pluto-rocket-sailing.png")
+  }
+  &.is-stairs {
+    background-image: url("http://cdn.classup.space/assets/medals/pluto-stairs-put-stars.png")
+  }
+  &.is-suite {
+    background-image: url("http://cdn.classup.space/assets/medals/pluto-suit-ready.png")
+  }
+  &.is-talking {
+    background-image: url("http://cdn.classup.space/assets/medals/pluto-talking.png")
+  }
+  &.is-walking {
+    background-image: url("http://cdn.classup.space/assets/medals/pluto-walking.png")
+  }
+}

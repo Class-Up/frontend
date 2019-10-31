@@ -1,0 +1,36 @@
+.is-fab {
+    background-image: url("http://cdn.classup.space/assets/fab_background.png");
+    width: 103px;
+    height: 70px;
+    position: relative;
+  a {
+    display: block;
+    margin: auto;
+    width: 100%;
+    padding: 16px 0;
+    color: white;
+  }
+    position: relative;
+    width: 50px; 
+    height: 55px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 15px;
+    &:after,&:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        border-left: 25px solid white;
+        border-right: 25px solid white;
+    }
+    &:before {
+        bottom: 100%;
+        border-bottom: 12.5px solid transparent;
+        top: 0px;
+    }
+    &:after{
+        bottom: 0;
+        width: 0;
+        border-top: 12.5px solid transparent;
+    }
+  }
