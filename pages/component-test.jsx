@@ -1,23 +1,17 @@
 
 import React from 'react'
-import Medals from '../components/Medals'
-//import BottomNavbar from '../components/BottomNavbar'
-import FloatActionButton from '../components/FloatActionButton'
+import Group from '../components/Group'
 
 function ComponentTest () {
   return (
     <div className='container'>
       <div className='column'>
-        {/* <BottomNavbar
-          icons={[
-            'fas fa-sticky-note',
-            'fas fa-calendar',
-            'fas fa-tasks',
-            'fas fa-user-graduate'
-          ]}
-        /> */}
-        <Medals image='conquer' />
-        <FloatActionButton />
+        <Group
+          name='Javascript'
+          studentsQuantity='5'
+          tasksQuantity='20'
+          students={[{ gender: 'female' }, { gender: 'female' }, { gender: 'male' }, { gender: 'male' }]}
+        />
       </div>
     </div>
   )
