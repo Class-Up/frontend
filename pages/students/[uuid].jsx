@@ -28,20 +28,20 @@ function Students () {
     getStudent()
 
     return () => {
-      abortController.abort();
+      abortController.abort()
     }
   })
 
   return (
-    <section class="hero is-fullheight-with-navbar">
-      <div class="hero-body">
-        <div class="container">
+    <section class='hero is-fullheight-with-navbar'>
+      <div class='hero-body'>
+        <div class='container'>
           <div className='student-profile'>
             {state.isLoading && <Loading />}
             <div className='columns'>
               {state.student && (
                 <>
-                  <div className="column is-one-quarter has-text-centered">
+                  <div className='column is-one-quarter has-text-centered'>
                     <Avatar gender={state.student.gender} />
                     <Title
                       text={state.student.firstName}

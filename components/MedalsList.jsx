@@ -21,7 +21,7 @@ function MedalsList (props) {
           )
         })}
       </div>
-    </div >
+    </div>
   )
 }
 
