@@ -7,13 +7,13 @@ function MedalsList (props) {
   return (
     <div className='medal-list'>
       <Title
-        size='3'
+        size='5'
         text='Tus Medallas'
       />
-      <div className='columns is-mobile'>
+      <div className="columns is-multiline is-mobile">
         {props.medals.map((medal, index) => {
           return (
-            <div className='column' key={index}>
+            <div className="column is-one-third" key={index}>
               <Medals
                 image={medal.name}
               />

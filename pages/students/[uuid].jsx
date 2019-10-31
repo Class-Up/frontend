@@ -20,10 +20,14 @@ function Students () {
     const abortController = new AbortController()
 
     const getStudent = async () => {
-      const response = await api.getStudent(uuid)
-      const parsedJson = await response.json()
-      const { student } = parsedJson.data
-      if (!state.student) setState({ student, isLoading: false })
+      const student = await api.getStudent(uuid)
+      if (!state.student) {
+        setState({
+          student,
+          isLoading: false
+        })
+        console.log('Student:', student)
+      }
     }
     getStudent()
 
@@ -33,35 +37,33 @@ function Students () {
   })
 
   return (
-    <section class='hero is-fullheight-with-navbar'>
-      <div class='hero-body'>
-        <div class='container'>
-          <div className='student-profile'>
-            {state.isLoading && <Loading />}
-            <div className='columns'>
-              {state.student && (
-                <>
-                  <div className='column is-one-quarter has-text-centered'>
-                    <Avatar gender={state.student.gender} />
-                    <Title
-                      text={state.student.firstName}
-                      size='3'
-                    />
-                    <LearningType />
-                  </div>
-                  <div className='column is-one-quarter'>
+    <div className='student-profile'>
+      {state.isLoading && <Loading />}
+      <div className='columns'>
+        {state.student && (
+          <>
+            <div className='column is-3'>
+              <div className="columns is-centered has-text-centered is-multiline">
+                <div className="column is-full">
+                  <Avatar gender={state.student.gender} />
+                  <Title
+                    text={state.student.firstName}
+                    size='4'
+                  />
+                  <LearningType />
+                  <div className="column is-full">
                     <MedalsList medals={state.student.medals} />
                   </div>
-                  <div className='column is-half'>
-                    <GroupList groups={state.student.groups} />
-                  </div>
-                </>
-              )}
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+            <div className='column is-9'>
+              <GroupList groups={state.student.groups} />
+            </div>
+          </>
+        )}
       </div>
-    </section>
+    </div>
   )
 }
 

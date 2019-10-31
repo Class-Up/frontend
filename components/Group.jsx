@@ -5,11 +5,11 @@ import ExagonalAvatar from './ExagonalAvatar'
 
 function Group (props) {
   return (
-    <div className='group'>
-      <div className='card is-shadowless'>
+    <div className='group-card'>
+      <div className='card '>
         <div className='card-content'>
           <div className='content'>
-            <div className='has-text-centered'>
+            <div className='has-text-left'>
               <Title text={props.name} size='4' />
             </div>
             <div className='columns is-mobile'>
