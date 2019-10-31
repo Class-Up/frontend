@@ -1,0 +1,9 @@
+.group {
+  border-radius: 15px;
+  .card {
+    border-radius: 15px;
+  }
+  &:hover{
+    box-shadow: 0 5px 15px 3px #dedede;
+  }
+}
