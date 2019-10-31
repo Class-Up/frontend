@@ -51,6 +51,9 @@
       "playground/",
       "*.test.js",
       "serviceWorker.js"
+    ],
+    "globals": [
+      "fetch"
     ]
   },
   "author": "Rurick Maqueo, Brenda Gonzalez, Carlos Ojeda",

@@ -1,12 +1,12 @@
 .is-avatar {
-  border: 0.5rem solid $pink;
+  border: 0.3rem solid $pink;
   border-radius: 50%;
-  width: 40vw;
-  height: 40vw;
+  width: 125px;
+  height: 125px;
   max-width: 200px;
   max-height: 200px;
-  min-height: 100px;
-  min-width: 100px;
+  min-height: 50px;
+  min-width: 50px;
   background-repeat: no-repeat;
   background-size: cover;
   &.is-female {
