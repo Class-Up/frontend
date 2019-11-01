@@ -19,8 +19,9 @@ $link-focus-border: $pink;
 @import "./sass/margin.scss";
 @import "./sass/float-action-button.scss";
 @import "./sass/group.scss";
+@import "./sass/task-card.scss";
 
-*{
+* {
   font-family: 'Open Sans', sans-serif;
 }
 .is-title {
@@ -29,6 +30,12 @@ $link-focus-border: $pink;
 
 .is-body {
   font-family: 'Open Sans', sans-serif;
+}
+
+.has-hover {
+  &:hover{
+    box-shadow: 0 5px 15px 3px #cacaca;
+  }
 }
 
 @import "./node_modules/bulma/bulma.sass";

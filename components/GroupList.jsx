@@ -23,8 +23,8 @@ function GroupList (props) {
                   <Group
                     name={group.name}
                     students={[]}
-                    tasksQuantity={group.students ? group.students.length : 0}
-                    studentsQuantity={group.students ? group.tasks.length : 0}
+                    tasksQuantity={group.students ? group.tasks.length : 0}
+                    studentsQuantity={group.students ? group.students.length : 0}
                   />
                 </a>
               </Link>

@@ -9,8 +9,8 @@ class Layout extends Component {
     return (
       <div className='layout columns is-multiline'>
         <Navbar />
-        <div className='column is-12'>
-          <div className='container'>
+        <div className='container'>
+          <div className='column is-12'>
             {this.props.children}
           </div>
         </div>
