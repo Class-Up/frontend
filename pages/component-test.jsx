@@ -1,12 +1,14 @@
 
 import React from 'react'
 import BottomNavbar from '../components/BottomNavbar'
+import Modal from '../components/Modal'
+import BottomNavbarIcon from '../components/BottomNavbarIcon'
 
 function ComponentTest () {
   return (
     <div className='container'>
       <div className='column'>
-        <BottomNavbar
+        {/* <BottomNavbar
           icons={[
             'fas fa-user-graduate',
             'fas fa-sticky-note',
@@ -15,6 +17,8 @@ function ComponentTest () {
           ]}
         />
       </div>
+      <Modal title='Agregar'/> */}
+      <BottomNavbarIcon image=''/>
     </div>
   )
 }
