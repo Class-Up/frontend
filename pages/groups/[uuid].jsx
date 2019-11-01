@@ -1,4 +1,5 @@
 import React from 'react'
+import Router from 'next/router'
 
 import api from '../../lib/api'
 
@@ -19,6 +20,20 @@ function GroupDetails (props) {
 
 GroupDetails.getInitialProps = async (ctx) => {
   const group = await api.getGroup(ctx.query.uuid)
+
+  const { res } = ctx
+  if (!group) {
+    if (res) {
+      res.writeHead(302, {
+        Location: '/error'
+      })
+      res.end()
+    } else {
+      Router.push('/error')
+    }
+    return {}
+  }
+
   return { group }
 }
 

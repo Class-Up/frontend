@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Router from 'next/router'
 
 import api from '../../lib/api'
 
@@ -69,7 +70,20 @@ function Teacher (props) {
 
 Teacher.getInitialProps = async (ctx) => {
   const teacher = await api.getTeacher(ctx.query.uuid)
-  console.log('Students:', teacher.students)
+
+  const { res } = ctx
+  if (!teacher) {
+    if (res) {
+      res.writeHead(302, {
+        Location: '/error'
+      })
+      res.end()
+    } else {
+      Router.push('/error')
+    }
+    return {}
+  }
+
   return { teacher }
 }
 
