@@ -6,12 +6,21 @@ import Title from './Title'
 import AddGroup from './AddGroup'
 
 function StudentCardList (props) {
-  // const allStudents = props.students.reduce((allStudents, studentGroup) => {
-  //   return [
-  //     ...allStudents,
-  //     ...studentGroup
-  //   ]
-  // }, [])
+  // ToDo: buscar un mejor algoritmo
+  const students = props.students.reduce((students, currentStudent) => {
+    console.log('Names:', students.names)
+    if (students.names.includes(currentStudent.firstName)) return students
+    return {
+      names: [
+        ...students.names,
+        currentStudent.firstName
+      ],
+      values: [
+        ...students.values,
+        currentStudent
+      ]
+    }
+  }, { names: [], values: [] })
 
   return (
     <div className='group-list'>
@@ -20,7 +29,7 @@ function StudentCardList (props) {
         text='Tus Alumnos'
       />
       <div className='columns is-multiline'>
-        {props.students.map((student, index) => {
+        {students.values.map((student, index) => {
           if (!student) return <></>
           return (
             <div className='column is-full' key={index}>

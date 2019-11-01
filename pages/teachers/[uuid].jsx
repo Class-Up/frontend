@@ -4,6 +4,7 @@ import Link from 'next/link'
 import api from '../../lib/api'
 
 import Title from '../../components/Title'
+import BodyText from '../../components/BodyText'
 import Avatar from '../../components/Avatar'
 import Button from '../../components/Button'
 import GroupList from '../../components/GroupList'
@@ -22,6 +23,12 @@ function Teacher (props) {
           <div className='column is-full has-text-centered'>
             <Title
               text={teacher.firstName}
+              size='4'
+            />
+          </div>
+          <div className='column is-full has-text-centered'>
+            <BodyText
+              text='Profesor Especializado en FrontEnd'
               size='4'
             />
           </div>
