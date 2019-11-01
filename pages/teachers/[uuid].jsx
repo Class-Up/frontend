@@ -1,15 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
+import Router from 'next/router'
 
 import api from '../../lib/api'
 
 import Title from '../../components/Title'
+import BodyText from '../../components/BodyText'
 import Avatar from '../../components/Avatar'
-import Agenda from '../../components/Agenda'
 import Button from '../../components/Button'
-import MedalsList from '../../components/MedalsList'
 import GroupList from '../../components/GroupList'
 import LearningTypeGraph from '../../components/LearningTypeGraph'
+import StudentCardList from '../../components/StudentCardList'
 
 function Teacher (props) {
   const { teacher = {} } = props
@@ -27,13 +28,17 @@ function Teacher (props) {
             />
           </div>
           <div className='column is-full has-text-centered'>
-            <MedalsList medals={teacher.medals} />
+            <BodyText
+              text='Profesor Especializado en FrontEnd'
+              size='4'
+            />
           </div>
-          <div className='column is-full has-text-centered' height='500px'>
-            <LearningTypeGraph data={teacher.learningRate} />
-          </div>
+          {teacher.learningRate && (
+            <div className='column is-full has-text-centered' height='500px'>
+              <LearningTypeGraph data={teacher.learningRate} isTeacher />
+            </div>
+          )}
           <div className='column is-full has-text-centered'>
-            {/* <Link href='http://app.classup.space/personlaity-insights'> */}
             <Link href='/personality-insights'>
               <a>
                 <Button text='Análisis de Personalidad' size='6' />
@@ -41,7 +46,6 @@ function Teacher (props) {
             </Link>
           </div>
           <div className='column is-full has-text-centered'>
-            {/* <Link href='/http://app.classup.space/learning-test'> */}
             <Link href='/learning-test'>
               <a>
                 <Button text='Tipo de Estudiante' size='6' />
@@ -56,7 +60,7 @@ function Teacher (props) {
             <GroupList groups={teacher.groups} />
           </div>
           <div className='column is-two-third'>
-            <Agenda tasks={teacher.tasks} />
+            <StudentCardList students={teacher.students} />
           </div>
         </div>
       </div>
@@ -66,6 +70,20 @@ function Teacher (props) {
 
 Teacher.getInitialProps = async (ctx) => {
   const teacher = await api.getTeacher(ctx.query.uuid)
+
+  const { res } = ctx
+  if (!teacher) {
+    if (res) {
+      res.writeHead(302, {
+        Location: '/error'
+      })
+      res.end()
+    } else {
+      Router.push('/error')
+    }
+    return {}
+  }
+
   return { teacher }
 }
 

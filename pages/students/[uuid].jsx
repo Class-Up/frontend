@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Router from 'next/router'
 
 import api from '../../lib/api'
 
@@ -19,22 +20,25 @@ function Students (props) {
       <div className='column is-3'>
         <div className='columns is-centered has-text-centered is-multiline'>
           <div className='column is-full has-text-centered is-centered'>
-            <Avatar gender={student.gender} />
+            <Avatar gender={student ? student.gender : 'female'} />
           </div>
           <div className='column is-full has-text-centered'>
             <Title
-              text={student.firstName}
+              text={student ? student.firstName : 'Fulano'}
               size='4'
             />
           </div>
+          {student && (
+            <div className='column is-full has-text-centered'>
+              <MedalsList medals={student ? student.medals : []} />
+            </div>
+          )}
+          {student && (
+            <div className='column is-full has-text-centered' height='500px'>
+              <LearningTypeGraph data={student ? student.learningRate : {}} />
+            </div>
+          )}
           <div className='column is-full has-text-centered'>
-            <MedalsList medals={student.medals} />
-          </div>
-          <div className='column is-full has-text-centered' height='500px'>
-            <LearningTypeGraph data={student.learningRate} />
-          </div>
-          <div className='column is-full has-text-centered'>
-            {/* <Link href='http://app.classup.space/personlaity-insights'> */}
             <Link href='/personality-insights'>
               <a>
                 <Button text='Análisis de Personalidad' size='6' />
@@ -42,7 +46,6 @@ function Students (props) {
             </Link>
           </div>
           <div className='column is-full has-text-centered'>
-            {/* <Link href='/http://app.classup.space/learning-test'> */}
             <Link href='/learning-test'>
               <a>
                 <Button text='Tipo de Estudiante' size='6' />
@@ -54,10 +57,10 @@ function Students (props) {
       <div className='column is-9'>
         <div className='columns'>
           <div className='column is-one-third'>
-            <GroupList groups={student.groups} />
+            <GroupList groups={student ? student.groups : []} />
           </div>
           <div className='column is-two-third'>
-            <Agenda tasks={student.tasks} />
+            <Agenda tasks={student ? student.tasks : []} />
           </div>
         </div>
       </div>
@@ -67,6 +70,20 @@ function Students (props) {
 
 Students.getInitialProps = async (ctx) => {
   const student = await api.getStudent(ctx.query.uuid)
+
+  const { res } = ctx
+  if (!student) {
+    if (res) {
+      res.writeHead(302, {
+        Location: '/error'
+      })
+      res.end()
+    } else {
+      Router.push('/error')
+    }
+    return {}
+  }
+
   return { student }
 }
 

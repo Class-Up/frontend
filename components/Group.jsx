@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import Title from './Title'
+import BodyText from './BodyText'
 import Icon from './Icon'
 import ExagonalAvatar from './ExagonalAvatar'
 
@@ -12,7 +12,11 @@ function Group (props) {
         <div className='card-content'>
           <div className='content'>
             <div className='has-text-left'>
-              <Title text={props.name} size='4' />
+              <BodyText
+                text={props.name}
+                size='4'
+                position='left'
+              />
             </div>
             <div className='columns is-mobile'>
               <div className='column'>
