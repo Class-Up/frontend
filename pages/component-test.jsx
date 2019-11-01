@@ -3,7 +3,6 @@ import React from 'react'
 <<<<<<< HEAD
 import BottomNavbar from '../components/BottomNavbar'
 import Modal from '../components/Modal'
-import BottomNavbarIcon from '../components/BottomNavbarIcon'
 =======
 import Group from '../components/Group'
 >>>>>>> d662c395c0270750c18ab4ea13fcd83074ca0502
@@ -30,7 +29,6 @@ function ComponentTest () {
         />
       </div>
       <Modal title='Agregar'/> */}
-      <BottomNavbarIcon image=''/>
     </div>
   )
 }
