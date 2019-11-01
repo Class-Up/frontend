@@ -7,10 +7,12 @@ import Navbar from '../components/Navbar'
 class Layout extends Component {
   render () {
     return (
-      <div className='layout'>
+      <div className='layout columns is-multiline'>
         <Navbar />
         <div className='container'>
-          {this.props.children}
+          <div className='column is-12'>
+            {this.props.children}
+          </div>
         </div>
       </div>
     )
