@@ -6,9 +6,9 @@ import api from '../../lib/api'
 import Avatar from '../../components/Avatar'
 import Title from '../../components/Title'
 import Loading from '../../components/Loading'
-import LearningType from '../../components/LearningType'
 import MedalsList from '../../components/MedalsList'
 import GroupList from '../../components/GroupList'
+import LearningTypeGraph from '../../components/LearinTypeGraph'
 
 function Students () {
   const [state, setState] = useState({ isLoading: true })
@@ -50,7 +50,7 @@ function Students () {
                     text={state.student.firstName}
                     size='4'
                   />
-                  <LearningType />
+                  <LearningTypeGraph data={state.student.learningRate} />
                   <div className='column is-full'>
                     <MedalsList medals={state.student.medals} />
                   </div>
