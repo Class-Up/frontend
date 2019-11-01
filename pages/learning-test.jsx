@@ -1,11 +1,24 @@
 import React from 'react'
 
+import { useState } from 'react'
 import Link from 'next/link'
 
 import Question from '../components/Question'
 
 import questions from '../constants/questions'
 import Button from '../components/Button'
+
+const [responses, setResponses] = useState([])
+
+function onSelectQuestion (question, selectedOption) {
+  setResponses([
+    ...responses,
+    {
+      question,
+      selectedOption
+    }
+  ])
+}
 
 function LearningTest () {
   return (
@@ -16,6 +29,7 @@ function LearningTest () {
             <Question
               question={question.question}
               options={question.options}
+              onSelect={onSelectQuestion}
               key={index}
             />
           )

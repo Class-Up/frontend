@@ -12,11 +12,13 @@ $link-focus-border: $pink;
 @import "./sass/hexagonal.scss";
 @import "./sass/avatar.scss";
 @import "./sass/medals.scss";
+@import "./sass/exagonal-avatr.scss";
 @import "./sass/image.scss";
 @import "./sass/question.scss";
 @import "./sass/button.scss" ;
 @import "./sass/margin.scss";
 @import "./sass/float-action-button.scss";
+@import "./sass/group.scss";
 
 *{
   font-family: 'Open Sans', sans-serif;

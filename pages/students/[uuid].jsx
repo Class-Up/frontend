@@ -7,6 +7,8 @@ import Avatar from '../../components/Avatar'
 import Title from '../../components/Title'
 import Loading from '../../components/Loading'
 import LearningType from '../../components/LearningType'
+import MedalsList from '../../components/MedalsList'
+import GroupList from '../../components/GroupList'
 
 function Students () {
   const [state, setState] = useState({ isLoading: true })
@@ -18,15 +20,19 @@ function Students () {
     const abortController = new AbortController()
 
     const getStudent = async () => {
-      const response = await api.getStudent(uuid)
-      const parsedJson = await response.json()
-      const { student } = parsedJson.data
-      if (!state.student) setState({ student, isLoading: false })
+      const student = await api.getStudent(uuid)
+      if (!state.student) {
+        setState({
+          student,
+          isLoading: false
+        })
+        console.log('Student:', student)
+      }
     }
     getStudent()
 
     return () => {
-      abortController.abort();
+      abortController.abort()
     }
   })
 
@@ -35,19 +41,27 @@ function Students () {
       {state.isLoading && <Loading />}
       <div className='columns'>
         {state.student && (
-          <div className="column">
-            <Avatar gender={state.student.gender} />
-            <Title
-              text={state.student.firstName}
-              size='3'
-            />
-            <LearningType />
-          </div>
+          <>
+            <div className='column is-3'>
+              <div className="columns is-centered has-text-centered is-multiline">
+                <div className="column is-full">
+                  <Avatar gender={state.student.gender} />
+                  <Title
+                    text={state.student.firstName}
+                    size='4'
+                  />
+                  <LearningType />
+                  <div className="column is-full">
+                    <MedalsList medals={state.student.medals} />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='column is-9'>
+              <GroupList groups={state.student.groups} />
+            </div>
+          </>
         )}
-        <div className='column has-text-centered'>hcfgj</div>
-        <div className='column has-text-centered'>jhk</div>
-        <div className='column has-text-centered'>ghjykhj</div>
-        <div className='column has-text-centered'>ghjykhj</div>
       </div>
     </div>
   )
