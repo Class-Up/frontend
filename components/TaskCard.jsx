@@ -13,24 +13,25 @@ function TaskCard (props) {
               <Title text={props.task.title} size='4' />
               <BodyText text={props.task.description} position='left' />
             </div>
-            <div className='columns is-mobile'>
-              <div className='column'>
-                <div className='columns is-centered is-mobile'>
-                  <div className='column is-2'>
-                    {props.isFromAgenda && !props.isFinished && (<Icon name='times' />)}
-                    {!props.isFromAgenda && (<Icon name='times' />)}
+            {!props.isFromAgenda && (
+              <div className='columns is-mobile'>
+
+                <div className='column'>
+                  <div className='columns is-centered is-mobile'>
+                    <div className='column is-2'>
+                      <Icon name='times' />
+                    </div>
+                  </div>
+                </div>
+                <div className='column'>
+                  <div className='columns is-centered is-mobile'>
+                    <div className='column is-2'>
+                      <Icon name='check' />
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className='column'>
-                <div className='columns is-centered is-mobile'>
-                  <div className='column is-2'>
-                    {props.isFromAgenda && props.isFinished && (<Icon name='check' />)}
-                    {!props.isFromAgenda && (<Icon name='check' />)}
-                  </div>
-                </div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

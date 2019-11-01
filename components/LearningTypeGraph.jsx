@@ -10,7 +10,7 @@ function LearningTypeGraph (props) {
           with: 600,
           height: 600,
           options: { maintainAspectRatio: false },
-          label: 'Mi tipo de aprendizaje',
+          label: props.isTeacher ? 'Mi forma de enseñar' : 'Mi tipo de aprendizaje',
           backgroundColor: 'rgba(254,56,136,0.2)',
           borderColor: 'rgba(254,56,136,1)',
           pointBackgroundColor: 'rgba(254,56,136,1)',

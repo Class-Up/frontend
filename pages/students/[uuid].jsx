@@ -19,7 +19,7 @@ function Students (props) {
       <div className='column is-3'>
         <div className='columns is-centered has-text-centered is-multiline'>
           <div className='column is-full has-text-centered is-centered'>
-            <Avatar gender={student.gender} />
+            <Avatar gender={student.gender || 'female'} />
           </div>
           <div className='column is-full has-text-centered'>
             <Title
@@ -27,14 +27,17 @@ function Students (props) {
               size='4'
             />
           </div>
+          {student.medals && (
+            <div className='column is-full has-text-centered'>
+              <MedalsList medals={student.medals} />
+            </div>
+          )}
+          {student.learningRate && (
+            <div className='column is-full has-text-centered' height='500px'>
+              <LearningTypeGraph data={student.learningRate} />
+            </div>
+          )}
           <div className='column is-full has-text-centered'>
-            <MedalsList medals={student.medals} />
-          </div>
-          <div className='column is-full has-text-centered' height='500px'>
-            <LearningTypeGraph data={student.learningRate} />
-          </div>
-          <div className='column is-full has-text-centered'>
-            {/* <Link href='http://app.classup.space/personlaity-insights'> */}
             <Link href='/personality-insights'>
               <a>
                 <Button text='Análisis de Personalidad' size='6' />
@@ -42,7 +45,6 @@ function Students (props) {
             </Link>
           </div>
           <div className='column is-full has-text-centered'>
-            {/* <Link href='/http://app.classup.space/learning-test'> */}
             <Link href='/learning-test'>
               <a>
                 <Button text='Tipo de Estudiante' size='6' />
