@@ -17,14 +17,16 @@ function TaskCard (props) {
               <div className='column'>
                 <div className='columns is-centered is-mobile'>
                   <div className='column is-2'>
-                    <Icon name='times' />
+                    {props.isFromAgenda && !props.isFinished && (<Icon name='times' />)}
+                    {!props.isFromAgenda && (<Icon name='times' />)}
                   </div>
                 </div>
               </div>
               <div className='column'>
                 <div className='columns is-centered is-mobile'>
                   <div className='column is-2'>
-                    <Icon name='check' />
+                    {props.isFromAgenda && props.isFinished && (<Icon name='check' />)}
+                    {!props.isFromAgenda && (<Icon name='check' />)}
                   </div>
                 </div>
               </div>

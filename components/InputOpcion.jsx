@@ -7,8 +7,15 @@ function InputOpcion (props) {
     >
       {props.options.map((option, index) => {
         return (
-          <label className='radio is-primary is-block answer' key={index}>
-            <input type='radio' name={props.question} />
+          <label
+            className='radio is-primary is-block answer'
+            key={index}
+          >
+            <input
+              type='radio'
+              name={props.question}
+              onClick={() => props.onSelect(props.number, option)}
+            />
             {option.answer}
           </label>
         )

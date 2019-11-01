@@ -12,12 +12,9 @@ function GroupList (props) {
         text='Tus Grupos'
       />
       <div className='columns is-multiline'>
-        <div className='column is-one-third'>
-          <AddGroup />
-        </div>
         {props.groups.map((group, index) => {
           return (
-            <div className='column is-one-third' key={index}>
+            <div className='column is-full' key={index}>
               <Link href='/groups/[uuid]' as={`/groups/${group._id}`}>
                 <a>
                   <Group
@@ -31,6 +28,9 @@ function GroupList (props) {
             </div>
           )
         })}
+        <div className='column is-full'>
+          <AddGroup />
+        </div>
       </div>
     </div>
   )

@@ -11,9 +11,6 @@ function TaskCardList (props) {
         text={`Tareas Del Grupo: ${props.group}`}
       />
       <div className='columns is-multiline'>
-        <div className='column is-one-third'>
-          <AddGroup />
-        </div>
         {props.tasks.map((task, index) => {
           return (
             <div className='column is-one-third' key={index}>
@@ -23,6 +20,9 @@ function TaskCardList (props) {
             </div>
           )
         })}
+        <div className='column is-one-third'>
+          <AddGroup />
+        </div>
       </div>
     </div>
   )

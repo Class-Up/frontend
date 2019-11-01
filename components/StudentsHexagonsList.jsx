@@ -11,18 +11,18 @@ function StudentsHexagonsList (props) {
         size='4'
         text={`Estudiantes Del Grupo: ${props.group}`}
       />
-      <div className='columns is-multiline'>
-        <div className='column is-1'>
-          <AddGroup />
-        </div>
+      <div className='columns is-mobile is-multiline'>
         {props.students.map((student, index) => {
           return (
-            <div className='column is-1' key={index}>
+            <div className='column is-1-desktop is-3-touch' key={index}>
               <ExagonalAvatar image={student.gender} />
               <BodyText text={student.firstName} />
             </div>
           )
         })}
+        <div className='column is-1-desktop is-3-touch'>
+          <AddGroup />
+        </div>
       </div>
     </div>
   )
