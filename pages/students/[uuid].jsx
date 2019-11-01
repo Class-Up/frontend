@@ -19,22 +19,22 @@ function Students (props) {
       <div className='column is-3'>
         <div className='columns is-centered has-text-centered is-multiline'>
           <div className='column is-full has-text-centered is-centered'>
-            <Avatar gender={student.gender || 'female'} />
+            <Avatar gender={student ? student.gender : 'female'} />
           </div>
           <div className='column is-full has-text-centered'>
             <Title
-              text={student.firstName}
+              text={student ? student.firstName : 'Fulano'}
               size='4'
             />
           </div>
-          {student.medals && (
+          {student && (
             <div className='column is-full has-text-centered'>
-              <MedalsList medals={student.medals} />
+              <MedalsList medals={student ? student.medals : []} />
             </div>
           )}
-          {student.learningRate && (
+          {student && (
             <div className='column is-full has-text-centered' height='500px'>
-              <LearningTypeGraph data={student.learningRate} />
+              <LearningTypeGraph data={student ? student.learningRate : {}} />
             </div>
           )}
           <div className='column is-full has-text-centered'>
@@ -56,10 +56,10 @@ function Students (props) {
       <div className='column is-9'>
         <div className='columns'>
           <div className='column is-one-third'>
-            <GroupList groups={student.groups} />
+            <GroupList groups={student ? student.groups : []} />
           </div>
           <div className='column is-two-third'>
-            <Agenda tasks={student.tasks} />
+            <Agenda tasks={student ? student.tasks : []} />
           </div>
         </div>
       </div>
