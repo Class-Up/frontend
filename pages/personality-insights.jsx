@@ -25,7 +25,7 @@ function PersonalityInsights () {
           <InputText
             placeholder='Ingresa al menos 100 palabras'
           />
-          <Link href='/student'>
+          <Link href='/students/5dae5cfaab8edd427663db7b'>
             <a className='is-block has-margin-top-1'>
               <Button
                 text='Finalizar'

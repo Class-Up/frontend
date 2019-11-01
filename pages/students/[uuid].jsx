@@ -43,15 +43,15 @@ function Students () {
         {state.student && (
           <>
             <div className='column is-3'>
-              <div className="columns is-centered has-text-centered is-multiline">
-                <div className="column is-full">
+              <div className='columns is-centered has-text-centered is-multiline'>
+                <div className='column is-full'>
                   <Avatar gender={state.student.gender} />
                   <Title
                     text={state.student.firstName}
                     size='4'
                   />
                   <LearningType />
-                  <div className="column is-full">
+                  <div className='column is-full'>
                     <MedalsList medals={state.student.medals} />
                   </div>
                 </div>
