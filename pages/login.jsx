@@ -2,20 +2,14 @@ import React from 'react'
 
 import Link from 'next/link'
 
-import api from '../lib/api'
-
 import ImageAndSideContainer from '../components/ImageAndSideContainer'
 import Title from '../components/Title'
 import FormLogin from '../components/FormLogin'
 import Button from '../components/Button'
 
 function Login () {
-  const login = async ({ email, password }) => {
-    const { token } = await api.login(email, password)
-
-    sessionStorage.setItem('token', token)
-
-    props.history.push('/student')
+  function login () {
+    // ToDo: make the petition to the back
   }
 
   return (
