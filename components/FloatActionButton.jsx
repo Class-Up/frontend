@@ -1,10 +1,9 @@
 import React from 'react'
 
 function FloatActionButton () {
-
-function handleClick(){
-  document.getElementById("modalCard").style.display='block'
-}
+  function handleClick () {
+    document.getElementById('modalCard').style.display = 'block'
+  }
 
   return (
     <div className='is-hexagon is-fab' onClick={handleClick}>

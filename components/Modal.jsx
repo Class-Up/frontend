@@ -1,10 +1,9 @@
 import React from 'react'
 
 function Modal (props) {
-
-function handleClick(){
-  document.getElementById('modalCard').style.display='none'
-}
+  function handleClick () {
+    document.getElementById('modalCard').style.display = 'none'
+  }
 
   return (
     <div id='modalCard' className='modal'>
@@ -28,7 +27,7 @@ function handleClick(){
                 </button>
               </p>
               <p class='control'>
-                <button class='button is-primary'>
+                <button class='button is-primary' onClick={handleClick}>
                Cancelar
                 </button>
               </p>
