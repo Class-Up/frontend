@@ -8,7 +8,7 @@ function MedalsList (props) {
     <div className='medal-list'>
       <Title
         size='5'
-        text='Tus Medallas'
+        text='Tus Logros'
       />
       <div className='columns is-multiline is-mobile'>
         {props.medals.map((medal, index) => {

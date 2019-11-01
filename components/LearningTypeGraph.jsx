@@ -7,6 +7,9 @@ function LearningTypeGraph (props) {
       labels: ['Kinestesico', 'Auditivo', 'Visual'],
       datasets: [
         {
+          with: 600,
+          height: 600,
+          options: { maintainAspectRatio: false },
           label: 'Mi tipo de aprendizaje',
           backgroundColor: 'rgba(254,56,136,0.2)',
           borderColor: 'rgba(254,56,136,1)',
@@ -14,7 +17,7 @@ function LearningTypeGraph (props) {
           pointBorderColor: '#fff',
           pointHoverBackgroundColor: '#fff',
           pointHoverBorderColor: 'rgba(254,56,136,1)',
-          data: [65, 59, 90] // Aqui se cambian los datos
+          data: [data.kinesthetic, data.auditive, data.visual]
         }
       ]
     }

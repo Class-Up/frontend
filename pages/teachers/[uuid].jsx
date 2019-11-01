@@ -11,27 +11,26 @@ import MedalsList from '../../components/MedalsList'
 import GroupList from '../../components/GroupList'
 import LearningTypeGraph from '../../components/LearningTypeGraph'
 
-function Students (props) {
-  const { student = {} } = props
-
+function Teacher (props) {
+  const { teacher = {} } = props
   return (
-    <main className=' columns is-centered'>
+    <main className='columns is-centered'>
       <div className='column is-3'>
         <div className='columns is-centered has-text-centered is-multiline'>
           <div className='column is-full has-text-centered is-centered'>
-            <Avatar gender={student.gender} />
+            <Avatar gender={teacher.gender} />
           </div>
           <div className='column is-full has-text-centered'>
             <Title
-              text={student.firstName}
+              text={teacher.firstName}
               size='4'
             />
           </div>
           <div className='column is-full has-text-centered'>
-            <MedalsList medals={student.medals} />
+            <MedalsList medals={teacher.medals} />
           </div>
           <div className='column is-full has-text-centered' height='500px'>
-            <LearningTypeGraph data={student.learningRate} />
+            <LearningTypeGraph data={teacher.learningRate} />
           </div>
           <div className='column is-full has-text-centered'>
             {/* <Link href='http://app.classup.space/personlaity-insights'> */}
@@ -54,10 +53,10 @@ function Students (props) {
       <div className='column is-9'>
         <div className='columns'>
           <div className='column is-one-third'>
-            <GroupList groups={student.groups} />
+            <GroupList groups={teacher.groups} />
           </div>
           <div className='column is-two-third'>
-            <Agenda tasks={student.tasks} />
+            <Agenda tasks={teacher.tasks} />
           </div>
         </div>
       </div>
@@ -65,9 +64,9 @@ function Students (props) {
   )
 }
 
-Students.getInitialProps = async (ctx) => {
-  const student = await api.getStudent(ctx.query.uuid)
-  return { student }
+Teacher.getInitialProps = async (ctx) => {
+  const teacher = await api.getTeacher(ctx.query.uuid)
+  return { teacher }
 }
 
-export default Students
+export default Teacher
