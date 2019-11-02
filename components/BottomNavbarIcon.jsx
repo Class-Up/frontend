@@ -5,7 +5,7 @@ function BottomNavbarIcon (props) {
     <li className={props.isActive}>
       <a>
         <span className='icon is-small'>
-          <i className={props.image} aria-hidden='true' />
+          <i className={`fas fa-${props.image}`} aria-hidden='true' />
         </span>
       </a>
     </li>

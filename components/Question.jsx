@@ -13,8 +13,10 @@ function Question (props) {
         text={props.question}
       />
       <InputOpcion
-        options={props.options}
         question={props.question}
+        options={props.options}
+        number={props.number}
+        onSelect={props.onSelect}
       />
     </div>
   )

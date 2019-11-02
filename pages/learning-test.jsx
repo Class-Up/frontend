@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Link from 'next/link'
 
@@ -8,6 +8,18 @@ import questions from '../constants/questions'
 import Button from '../components/Button'
 
 function LearningTest () {
+  const [responses, setResponses] = useState([])
+
+  function onSelectQuestion (number, selectedOption) {
+    setResponses([
+      ...responses,
+      {
+        number,
+        answer: selectedOption.type
+      }
+    ])
+  }
+
   return (
     <div className='columns'>
       <div className='column is-half is-offset-one-quarter'>
@@ -16,6 +28,8 @@ function LearningTest () {
             <Question
               question={question.question}
               options={question.options}
+              number={question.number}
+              onSelect={onSelectQuestion}
               key={index}
             />
           )
