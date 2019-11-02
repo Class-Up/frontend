@@ -8,7 +8,6 @@ import AddGroup from './AddGroup'
 function StudentCardList (props) {
   // ToDo: buscar un mejor algoritmo
   const students = props.students.reduce((students, currentStudent) => {
-    console.log('Names:', students.names)
     if (students.names.includes(currentStudent.firstName)) return students
     return {
       names: [

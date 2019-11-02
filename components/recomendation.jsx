@@ -1,7 +1,9 @@
 import React from 'react'
 
-function Recomendation () {
-
+function Recommendation () {
+  return (
+    <div> </div>
+  )
 }
 
-export default Recomendation
+export default Recommendation
