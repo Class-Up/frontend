@@ -1,6 +1,7 @@
 export default [
   {
     question: '¿Qué tipo de examen realizas con mayor facilidad?',
+    number: 1,
     options: [
       {
         answer: 'Examen escrito',
@@ -18,6 +19,7 @@ export default [
   },
   {
     question: 'Cuando tienes que aprender algo de memoria...',
+    number: 2,
     options: [
       {
         answer: 'Memorizo lo que veo y recuerdo la imagen (por ejemplo, la página del libro)',
@@ -35,6 +37,7 @@ export default [
   },
   {
     question: 'Cuando estás en clase y el profesor explica algo que está escrito en la pizarra o en tu libro, te es más fácil seguir las explicaciones...',
+    number: 3,
     options: [
       {
         answer: 'Escuchando al profesor',
@@ -52,6 +55,7 @@ export default [
   },
   {
     question: 'Marca la frase con las que te identifiques más',
+    number: 4,
     options: [
       {
         answer: 'Prefiero escuchar chistes que leer cómics',
@@ -69,6 +73,7 @@ export default [
   },
   {
     question: '¿Cuál de las siguientes actividades disfrutas más?',
+    number: 5,
     options: [
       {
         answer: 'Ver películas',
@@ -86,6 +91,7 @@ export default [
   },
   {
     question: '¿De qué manera te resulta más fácil aprender algo?',
+    number: 6,
     options: [
       {
         answer: 'Repitiendo en voz alta',
@@ -103,6 +109,7 @@ export default [
   },
   {
     question: 'Cuando no encuentras las llaves en una bolsa, ¿qué haces para encontrarlas más rápidamente?',
+    number: 7,
     options: [
       {
         answer: 'Sacudo la bolsa para oír el ruído',
@@ -120,6 +127,7 @@ export default [
   },
   {
     question: 'Cuando te dan instrucciones...',
+    number: 8,
     options: [
       {
         answer: 'Me pongo en movimiento antes de que acaben de hablar y explicar lo que hay que hacer',
@@ -137,6 +145,7 @@ export default [
   },
   {
     question: '¿Cuál de estos ambientes te atrae más?',
+    number: 9,
     options: [
       {
         answer: 'Uno en el que se escuchen las olas del mar',
@@ -154,6 +163,7 @@ export default [
   },
   {
     question: 'Si te ofrecieran uno de los siguientes empleos, ¿cuál elegirías?',
+    number: 10,
     options: [
       {
         answer: 'Director de un club deportivo',
@@ -171,6 +181,7 @@ export default [
   },
   {
     question: '¿A qué tipo de evento preferirías asistir?',
+    number: 11,
     options: [
       {
         answer: 'A un concierto de música',
@@ -188,6 +199,7 @@ export default [
   },
   {
     question: 'Si tuvieras mucho dinero ahora mismo, ¿qué harías?',
+    number: 12,
     options: [
       {
         answer: 'Viajar y conocer el mundo',
@@ -205,6 +217,7 @@ export default [
   },
   {
     question: 'En clase lo que más te gusta para aprender es que...',
+    number: 13,
     options: [
       {
         answer: 'Se organicen actividades en que los alumnos tengan que hacer cosas y puedan moverse',
@@ -222,6 +235,7 @@ export default [
   },
   {
     question: 'Principalmente, ¿cómo te consideras?',
+    number: 14,
     options: [
       {
         answer: 'Sociable',
@@ -239,6 +253,7 @@ export default [
   },
   {
     question: 'Si tuvieras que quedarte en una isla desierta, ¿qué preferirías llevar contigo?',
+    number: 15,
     options: [
       {
         answer: 'Un radio portátil',
@@ -256,6 +271,7 @@ export default [
   },
   {
     question: '¿Qué cosas te distraen más en clase?',
+    number: 16,
     options: [
       {
         answer: 'El ruido',
@@ -273,6 +289,7 @@ export default [
   },
   {
     question: '¿Qué programas de televisión prefieres ver?',
+    number: 17,
     options: [
       {
         answer: 'Noticias sobre el mundo y la actualidad',
@@ -290,6 +307,7 @@ export default [
   },
   {
     question: '¿Qué prefieres hacer en tu tarde libre?',
+    number: 18,
     options: [
       {
         answer: 'Ir al cine',
@@ -307,6 +325,7 @@ export default [
   },
   {
     question: '¿De qué manera te formas una opinión de otras personas?',
+    number: 19,
     options: [
       {
         answer: 'Por la sinceridad en su voz',
@@ -324,6 +343,7 @@ export default [
   },
   {
     question: '¿Cómo prefieres pasar el tiempo con tu pareja?',
+    number: 20,
     options: [
       {
         answer: 'Viendo algo juntos',
@@ -341,6 +361,7 @@ export default [
   },
   {
     question: '¿Cómo definirías tu forma de vestir?',
+    number: 21,
     options: [
       {
         answer: 'Con gusto y conjuntada',
@@ -358,6 +379,7 @@ export default [
   },
   {
     question: 'Si pudieras elegir ¿qué preferirías ser?',
+    number: 22,
     options: [
       {
         answer: 'Un gran músico',
@@ -375,6 +397,7 @@ export default [
   },
   {
     question: '¿Qué es lo que más te gusta de una habitación?',
+    number: 23,
     options: [
       {
         answer: 'Que sea confortable',
@@ -392,6 +415,7 @@ export default [
   },
   {
     question: '¿Qué es lo que más te gusta de viajar?',
+    number: 24,
     options: [
       {
         answer: 'Conocer lugares nuevos',

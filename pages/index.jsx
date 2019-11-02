@@ -9,7 +9,6 @@ function Index (props) {
 
 Index.getInitialProps = async (ctx) => {
   const { res } = ctx
-  console.log('Ctx', ctx)
   if (res) {
     res.writeHead(302, {
       Location: '/login'
