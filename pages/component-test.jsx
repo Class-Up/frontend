@@ -1,7 +1,6 @@
 
 import React from 'react'
 import Group from '../components/Group'
-import Recomendation from '../components/Recomendation'
 
 function ComponentTest () {
   return (

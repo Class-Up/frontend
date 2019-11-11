@@ -70,6 +70,8 @@ function Teacher (props) {
 
 Teacher.getInitialProps = async (ctx) => {
   const teacher = await api.getTeacher(ctx.query.uuid)
+  console.log('Uuid:', ctx.query.uuid)
+  console.log('Teacher:', teacher)
 
   const { res } = ctx
   if (!teacher) {

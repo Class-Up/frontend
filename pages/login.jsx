@@ -24,7 +24,7 @@ function Login () {
         onSubmit={login}
       />
 
-      <Link href='../student'>
+      <Link href='/teachers/5dae597729a0633d677378eb'>
         <a className='is-block has-margin-top-1'>
           <div className='is-block'>
             <Button
@@ -33,7 +33,7 @@ function Login () {
           </div>
         </a>
       </Link>
-      <Link href='../signup/first'>
+      <Link href='/signup/first'>
         <a className='is-block has-margin-top-1'>
           <div className='is-block'>
             <Button
