@@ -1,4 +1,6 @@
 import React from 'react'
+
+import Head from 'next/head'
 import Router from 'next/router'
 
 import api from '../../lib/api'
@@ -10,10 +12,15 @@ function GroupDetails (props) {
   const { group = {} } = props
 
   return (
-    <div className='group-details'>
-      <StudentsHexagonsList students={group.students} group={group.name} />
-      <br />
-      <TaskCardList tasks={group.tasks} group={group.name} />
+    <div>
+      <Head>
+        <title>{group.name} Group | ClassUp</title>
+      </Head>
+      <div className='group-details'>
+        <StudentsHexagonsList students={group.students} group={group.name} />
+        <br />
+        <TaskCardList tasks={group.tasks} group={group.name} />
+      </div>
     </div>
   )
 }

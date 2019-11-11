@@ -1,4 +1,6 @@
 import React from 'react'
+
+import Head from 'next/head'
 import Link from 'next/link'
 import Router from 'next/router'
 
@@ -16,55 +18,60 @@ function Students (props) {
   const { student = {} } = props
 
   return (
-    <main className=' columns is-centered'>
-      <div className='column is-3'>
-        <div className='columns is-centered has-text-centered is-multiline'>
-          <div className='column is-full has-text-centered is-centered'>
-            <Avatar gender={student ? student.gender : 'female'} />
-          </div>
-          <div className='column is-full has-text-centered'>
-            <Title
-              text={student ? student.firstName : 'Fulano'}
-              size='4'
-            />
-          </div>
-          {student && (
+    <div>
+      <Head>
+        <title>{student.firstName} | ClassUp</title>
+      </Head>
+      <main className=' columns is-centered'>
+        <div className='column is-3'>
+          <div className='columns is-centered has-text-centered is-multiline'>
+            <div className='column is-full has-text-centered is-centered'>
+              <Avatar gender={student ? student.gender : 'female'} />
+            </div>
             <div className='column is-full has-text-centered'>
-              <MedalsList medals={student ? student.medals : []} />
+              <Title
+                text={student ? student.firstName : 'Fulano'}
+                size='4'
+              />
             </div>
-          )}
-          {student && (
-            <div className='column is-full has-text-centered' height='500px'>
-              <LearningTypeGraph data={student ? student.learningRate : {}} />
+            {student && (
+              <div className='column is-full has-text-centered'>
+                <MedalsList medals={student ? student.medals : []} />
+              </div>
+            )}
+            {student && (
+              <div className='column is-full has-text-centered' height='500px'>
+                <LearningTypeGraph data={student ? student.learningRate : {}} />
+              </div>
+            )}
+            <div className='column is-full has-text-centered'>
+              <Link href='/personality-insights'>
+                <a>
+                  <Button text='Análisis de Personalidad' size='6' />
+                </a>
+              </Link>
             </div>
-          )}
-          <div className='column is-full has-text-centered'>
-            <Link href='/personality-insights'>
-              <a>
-                <Button text='Análisis de Personalidad' size='6' />
-              </a>
-            </Link>
-          </div>
-          <div className='column is-full has-text-centered'>
-            <Link href='/learning-test'>
-              <a>
-                <Button text='Tipo de Estudiante' size='6' />
-              </a>
-            </Link>
+            <div className='column is-full has-text-centered'>
+              <Link href='/learning-test'>
+                <a>
+                  <Button text='Tipo de Estudiante' size='6' />
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-      <div className='column is-9'>
-        <div className='columns'>
-          <div className='column is-one-third'>
-            <GroupList groups={student ? student.groups : []} />
-          </div>
-          <div className='column is-two-third'>
-            <Agenda tasks={student ? student.tasks : []} />
+        <div className='column is-9'>
+          <div className='columns'>
+            <div className='column is-one-third'>
+              <GroupList groups={student ? student.groups : []} />
+            </div>
+            <div className='column is-two-third'>
+              <Agenda tasks={student ? student.tasks : []} />
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   )
 }
 

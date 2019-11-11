@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Head from 'next/head'
 import Link from 'next/link'
 
 import ImageAndSideContainer from '../components/ImageAndSideContainer'
@@ -13,37 +14,42 @@ function Login () {
   }
 
   return (
-    <ImageAndSideContainer
-      image='pluto-suit-ready.svg'
-    >
-      <Title
-        isBlack
-        text='Iniciar Sesión'
-      />
-      <FormLogin
-        onSubmit={login}
-      />
+    <div>
+      <Head>
+        <title>ClassUp | Login</title>
+      </Head>
+      <ImageAndSideContainer
+        image='pluto-suit-ready.svg'
+      >
+        <Title
+          isBlack
+          text='Iniciar Sesión'
+        />
+        <FormLogin
+          onSubmit={login}
+        />
 
-      <Link href='/teachers/5dae597729a0633d677378eb'>
-        <a className='is-block has-margin-top-1'>
-          <div className='is-block'>
-            <Button
-              text='Iniciar Sesión'
-            />
-          </div>
-        </a>
-      </Link>
-      <Link href='/signup/first'>
-        <a className='is-block has-margin-top-1'>
-          <div className='is-block'>
-            <Button
-              isOutlined
-              text='Registrarme'
-            />
-          </div>
-        </a>
-      </Link>
-    </ImageAndSideContainer>
+        <Link href='/teachers/5dae597729a0633d677378eb'>
+          <a className='is-block has-margin-top-1'>
+            <div className='is-block'>
+              <Button
+                text='Iniciar Sesión'
+              />
+            </div>
+          </a>
+        </Link>
+        <Link href='/signup/first'>
+          <a className='is-block has-margin-top-1'>
+            <div className='is-block'>
+              <Button
+                isOutlined
+                text='Registrarme'
+              />
+            </div>
+          </a>
+        </Link>
+      </ImageAndSideContainer>
+    </div>
   )
 }
 
